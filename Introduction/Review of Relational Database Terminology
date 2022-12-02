@@ -1,1 +1,10 @@
-
+Database: a collection of data. In a relational database, this data is organized into Tables.
+Table: A group of Records, represents data in the form of rows and coloumns.
+Tuple/Record: This is known as a row in a Table. No two rows are equal but all share a common set of fields.
+Attribute/Field: This is known as columns in a Table. It stores the data of a particular field.
+Delimiter: the character used to differentiate among the fields in a Record
+Data entry: By Creating, updating, and deleting records we can enter the data.
+Query: determining the data selection to sort or to do any calculations to be performed on the data
+Aggregate functions in a query: The inbuilt database functions like MAX(),MIN() etc...
+Primary Key: Every table has one Primary key and cannot have null values.
+Composite Key: A primary key having two or more attributes is called composite key.
