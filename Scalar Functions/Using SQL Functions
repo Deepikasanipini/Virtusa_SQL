@@ -1,0 +1,9 @@
+SQL has many built-in functions. Following is the list of all useful SQL built-in functions −
+SQL COUNT Function -  is used to count the number of rows in a database table.
+SQL MAX Function -  allows us to select the highest maximum value from a  column.
+SQL MIN Function -  allows us to select the lowest minimum value from a column.
+SQL AVG Function -  selects the average value from a column.
+SQL SUM Function -  allows selecting the total for a numeric column.
+SQL SQRT Functions - used to generate a square root of a given number.
+SQL RAND Function -  used to generate a random number.
+SQL CONCAT Function -  used to concatenate any string.
