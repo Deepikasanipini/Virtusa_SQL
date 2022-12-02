@@ -1,0 +1,42 @@
+SQL:
+SQL stands for Structured Query Language. It is called structured because it uses a basic english with syntax.
+SQL is used to create, remove, alter the database and database objects in a database management system and to store, retrieve, update the data in a database.
+SQL is a standard language for creating, accessing, manipulating database management system.
+It works for all modern relational database management systems, like SQL Server, Oracle, MySQL, etc.
+SQL commands are of five types
+
+DDL
+ 
+DDL stands for data definition language.
+DDL commands are used for creating and altering the database and database object in the relational database management system, like CREATE DATABASE, CREATE TABLE, ALTER TABLE, etc.
+The most used DDL commands are CREATE, DROP, ALTER, and TRUNCATE.
+
+DML
+ 
+DML stands for data manipulation language. 
+DML commands are used for manipulating data in a relational database management system. 
+DML commands are used for adding, removing, updating data in the database system, like INSERT INTO TableName, DELETE FROM TableName, UPDATE tableName set data, etc.
+The most used DML commands are INSERT INTO, DELETE FROM, UPDATE.
+
+DQL
+ 
+DQL stands for the data query language. 
+DQL command is used for fetching the data.
+DQL command is used for selecting data from the table, view, temp table, table variable, etc. 
+There is only one command under DQL which is the SELECT command.
+
+ 
+DCL
+ 
+DCL stands for data control language.
+DCL commands are used for providing and taking back the access rights on the database and database objects. 
+DCL command used for controlling user’s access on the data.
+Most used DCL commands are GRANT and REVOKE.
+
+TCL
+ 
+TCL stands for transaction control language.
+TCL commands are used for handling transactions in the database. 
+Transactions ensure data integrity in the multi-user environment. 
+TCL commands can rollback and commit data modification in the database. 
+The most used TCL commands are COMMIT, ROLLBACK, SAVEPOINT, and SET TRANSACTION.
