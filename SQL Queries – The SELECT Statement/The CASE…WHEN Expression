@@ -1,0 +1,14 @@
+set serveroutput on;
+declare
+grd char(1):='&enter_grd';
+begin
+ case   grd
+    when 'A' then dbms_output.put_line('Your grade is Outstanding');
+    when 'B' then dbms_output.put_line('Your grade is Excellent');
+    when 'C' then dbms_output.put_line('Your grade is Very Good');
+    when 'D' then dbms_output.put_line('Your grade is Average');
+    when'F' then dbms_output.put_line('Your grade is Poor');
+ else 
+    dbms_output.put_line('No such grade in the list');
+end case;
+end;
