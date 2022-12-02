@@ -1,0 +1,4 @@
+
+create view empaggre as select deptno,min(sal) "MIN SAL",max(sal) "MAX SAL",avg(sal) "AVG SAL" from emp group by deptno;
+
+select empno,ename,job,sal from emp order by sal;
