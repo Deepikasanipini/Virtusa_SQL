@@ -1,0 +1,7 @@
+select empno, ename, sal, job from emp where job like '%C%'
+
+select empno, ename, sal from emp where ename like '%S'
+
+select empno, ename, sal from emp where ename like '_M__T_H'
+
+select empno, ename from emp where regexp_like(ename,'A') order by ename;
