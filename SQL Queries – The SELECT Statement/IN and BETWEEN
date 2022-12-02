@@ -1,0 +1,3 @@
+select empno, ename, sal, comm from emp where sal between 900 and 1500 ;
+
+select * from emp where job in ('CLERK','SALESMAN');
