@@ -1,0 +1,1 @@
+select empno,job,sal from emp order by sal ASC;
