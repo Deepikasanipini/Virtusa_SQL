@@ -1,0 +1,5 @@
+select concat('19K61A0',emp1_seq1.nextval) FROM dual;
+select substring('SQL', 1, 2);
+select ascii('t');
+select ename,empno,max(sal),min(sal) from emp;
+LENGTH('DATABASE');
