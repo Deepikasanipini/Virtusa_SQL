@@ -1,12 +1,1 @@
-A relational database organizes data into tables.
-A table is a collection of related data entries and contains rows and columns to store data. 
-The organized collection of data into a relational table is known as the logical view of the database.
-A row of a table is also called a record or tuple. It contains the specific information of each entry in the table.
-A column is a vertical entity in the table which contains all information associated with a specific field in a table, it is also known as attributrs.
-No two tuples are identical to each other in all their entries.
-All tuples of the relation have the same format and the same number of entries.
-Every attribute of a relation must have a name.
-Null values are permitted for the attributes.
-Default values can be specified for an attribute automatically inserted if no other value is specified for an attribute.
-Attributes that uniquely identify each tuple of a relation are the primary key.
-The NULL value of the table specifies that the field has been left blank during record creation. It is different from the value filled with zero or a field that contains space.
+
