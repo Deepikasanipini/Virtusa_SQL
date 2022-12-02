@@ -1,7 +1,4 @@
-set serveroutput on;
-declare
-grd char(1):='&enter_grd';
-begin
+select rollnum,name 
  case   grd
     when 'A' then dbms_output.put_line('Your grade is Outstanding');
     when 'B' then dbms_output.put_line('Your grade is Excellent');
@@ -11,4 +8,4 @@ begin
  else 
     dbms_output.put_line('No such grade in the list');
 end case;
-end;
+from student;
