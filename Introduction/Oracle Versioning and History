@@ -1,0 +1,25 @@
+Oracle Version History
+
+Oracle founded in August 1977 by Larry Ellison, Bob Miner, Ed Oates and Bruce Scott, Oracle was initially named after "Project Oracle" a project for one of their clients, the C.I.A, and the company that developed Oracle was dubbed "Systems Development Labs", or SDL.   
+Although they may not have realized it at the time, these four men would change the history of database management forever.
+
+Oracle Release Versions
+TOP Features according to Version of Oracle database from the first version are as follows.
+
+Version &     Year	           New Features
+Oracle v2,    1979	First commercially SQL-based RDBMS.
+Oracle v3,    1983 	Concurrency control, data distribution, scalability.
+Oracle v4,    1984	Multiversion read consistency.
+Oracle v5,    1985	Client/server computing Support & distributed database systems.
+Oracle v6,    1988	Row-level locking, scalability, online backup and recovery, PL/SQL, Oracle Parallel Server.
+Oracle  7,    1992	PL/SQL stored procedures, Triggers, Shared Cursors, Cost Based Optimizer, Transparent Application Failover.
+Oracle  8,    1997	Recovery Manager, Partitioning, Dataguard, Native internet protocols, Java, Virtual Private Database.
+Oracle  9,    2001	Oracle Real Application Clusters (RAC), Oracle XML DB, Data Mining, Streams, Logical Standby.
+Oracle 10gR1, 2003	Grid infrastructure, Oracle ASM, Flashback Database, Automatic Database Diagnostic Monitor.
+Oracle 10gR2, 2005	Real Application Testing, Database Vault, Online Indexing, Advanced Compression, Transparent Data Encryption.
+Oracle 11gR1, 2007	Active Data Guard, Secure Files, Exadata.
+Oracle 11gR2, 2009	Data Redaction, Hybrid Columnar Compression, Cluster File System, Golden Gate Replication, Database Appliance.
+Oracle 12cR1, 2013	Multitenant architecture, In-Memory Column Store, Native JSON, SQL Pattern Matching, Database Cloud Service.
+Oracle 12cR2, 2016	Native Sharding, Zero Data Loss Recovery Appliance, Exadata Cloud Service, Cloud at Customer.
+Oracle 18c,   2018	Autonomous Database, Data Guard Multi-Instance Redo Apply, Polymorphic Table Functions, Active Directory Integration.
+Oracle 19c,   2019	Automatic Indexing, Data-guard DML Redirect,Partitioned Hybrid Tables, Real-time Stats + Stats Only Queries.
