@@ -1,0 +1,12 @@
+create table demo(
+    rollno number(10) primary key,
+    name varchar2(10) not null,
+    gender varchar2(1)
+    
+);
+insert into demo values (1,'a','M');
+insert into demo values (2,'b','F');
+insert into demo values (3,'c','M');
+insert into demo values (4,'d','F');
+
+select * from demo;
