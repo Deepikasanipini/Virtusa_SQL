@@ -1,0 +1,14 @@
+set serveroutput on;
+declare 
+cursor emp_cou1 is select * from  emp where deptno=30;
+--recor emp%rowtype;
+begin
+for recor in emp_cou1 loop
+       dbms_output.put_line(recor.empno);
+    end loop;
+end;
+
+create or replace procedure emp_pro(deptno1 emp.deptno%type, emp_refcur in out sys_refcursor) as
+begin
+open emp_refcur for select empno,job from emp where deptno=deptno1;
+end;
