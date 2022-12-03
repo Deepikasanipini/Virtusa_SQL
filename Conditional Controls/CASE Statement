@@ -1,0 +1,17 @@
+CASE statements – learn how to choose one sequence of statements out of many possible sequences to execute.
+
+set serveroutput on;
+declare
+grd char(1):='&enter_grd';
+begin
+ case   grd
+    when 'A' then dbms_output.put_line('Your grade is Outstanding');
+    when 'B' then dbms_output.put_line('Your grade is Excellent');
+    when 'C' then dbms_output.put_line('Your grade is Very Good');
+    when 'D' then dbms_output.put_line('Your grade is Average');
+    when'F' then dbms_output.put_line('Your grade is Poor');
+ end case;
+ exception when others then
+    dbms_output.put_line('No such grade in the list');
+
+end;
