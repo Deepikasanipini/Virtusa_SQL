@@ -1,0 +1,4 @@
+select ename,sal  from emp where sal = 1500 union select ename,sal  from emp where  sal>1500 order by sal;
+select ename,sal from emp where sal <=1500 intersect select ename,sal from emp where  sal>=1500 order by sal;
+ 
+  
