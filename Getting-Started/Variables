@@ -1,0 +1,28 @@
+Variables – introduce you to PL/SQL variables and shows you how to manipulate variables in programs efficiently.
+
+set serveroutput on;
+declare
+sal_achieve number(10):= &sal;
+target_qty number(10):=&target;
+emp_id number(4):=&emp_id;
+incentive Number:=0;
+updated1 varchar2(3):='NO';
+begin
+  if sal_achieve > (target_qty+200) then
+        incentive :=(sal_achieve - target_qty)/4;
+        update emp set sal=sal+incentive where empno=emp_id;
+        updated1 :='YES';
+  end if;
+dbms_output.put_line('Table updated ?'||updated1||','||'incentive = '||incentive||'.');
+end;
+
+set serveroutput on
+declare
+ num number(10):=&num;
+begin
+ if( mod(num,2)=0) then 
+    dbms_output.put_line('The number '||num||' is even');
+ else
+    dbms_output.put_line('The number '||num||' is odd');
+ end if;
+end;
