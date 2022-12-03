@@ -1,0 +1,3 @@
+SELECT empno, ename FROM  emp WHERE sal > ( SELECT AVG(sal) FROM emp WHERE deptno = 10);
+
+SELECT empno, ename, (SELECT AVG(sal) FROM emp WHERE deptno = 10) AS department_average FROM  emp;
