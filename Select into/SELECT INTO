@@ -1,0 +1,17 @@
+set serveroutput on;
+declare
+en emp.empno%type :=&enter_empno;
+row1 emp%rowtype;
+begin
+select * into row1 from emp where empno=en;
+dbms_output.put_line(row1.ename||' '||row1.job||' '||row1.deptno);
+end;
+
+SET SERVEROUTPUT ON
+DECLARE
+rno number(3):= &rollno;
+stdname varchar2(20);
+BEGIN
+select sname into stdname from student where rollno=rno;
+dbms_output.put_line('The student '||stdname||' roll number is 19K61A0'||rno);
+END;
