@@ -1,0 +1,15 @@
+set serveroutput on;
+declare 
+empno1 emp.empno%type;
+deptno1 emp.deptno%type:=&dept;
+job1 emp.job%type;
+emp_refcur sys_refcursor;
+begin
+emp_pro(deptno1,emp_refcur);
+loop
+fetch emp_refcur into empno1,job1;
+exit when emp_refcur%notfound;
+dbms_output.put_line(empno1||' '||job1);
+end loop;
+close emp_refcur;
+end;
