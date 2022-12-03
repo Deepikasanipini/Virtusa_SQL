@@ -1,0 +1,11 @@
+select count(empno) from emp;
+
+select count(*) from emp where job='CLERK';
+
+select count(empno) from emp where sal>1000;
+
+select count(empno) from emp where sal>1000 and comm is NULL;
+
+select sum(sal) from emp where job='MANAGER';
+
+select count(cand_name) FROM election where st_name = 'Andhra Pradesh' and year = 1977;
