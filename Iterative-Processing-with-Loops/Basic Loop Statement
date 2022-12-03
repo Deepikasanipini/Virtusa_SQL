@@ -1,0 +1,11 @@
+Basic LOOP statement – show you how to use the basic LOOP statement to execute a sequence of code multiple times.
+
+set serveroutput on;
+declare
+n  number(10):=9;
+begin
+for n in 1..4 loop
+    dbms_output.put_line('Local variable n is '||n);
+end loop;
+dbms_output.put_line('Global variable n is '||n);
+end;
