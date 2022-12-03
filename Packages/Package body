@@ -18,3 +18,112 @@ sal1 emp.sal%type;
 begin
 E6_SDD.pro1(empno1,sal1);
 end;
+
+create or replace package  E6_SDD1 as
+procedure max1(a in out number,b in out number);
+procedure mini1(a in out number,b in out number);
+function max1(a in out number,b in out number) return number;
+function mini1(a in out number,b in out number)return number;
+end E6_SDD1;
+
+create or replace package body E6_SDD1 as
+ procedure max1(a in out number,b in out number) as
+ begin
+    if(a>b) then
+        dbms_output.put_line(a);
+    else 
+        dbms_output.put_line(b);
+    end if;
+end max1;
+
+procedure mini1(a in out number,b in out number) as
+begin
+    if(a<b) then 
+        dbms_output.put_line(a);
+    else
+        dbms_output.put_line(b);
+    end if;
+end mini1;
+
+function max1(a in out number,b in out number)return number as
+x number;
+begin
+if(a>b) then 
+    dbms_output.put_line(a);
+else
+    dbms_output.put_line(b);
+end if;
+end max1;
+
+function mini1(a in out number,b in out number) return number as
+x number;
+begin
+if(a<b) then
+    dbms_output.put_line(a);
+else
+    dbms_output.put_line(b);
+end if;
+end mini1;
+end E6_SDD1;
+
+set serveroutput on;
+declare 
+a number:=&a;
+b number :=&b;
+c number;
+begin
+E6_SDD1.max1(a,b);
+E6_SDD1.mini1(a,b);
+E6_SDD1.max1(a,b);
+E6_SDD1.mini1(a,b);
+end;
+
+create or replace  package tab_pkg as
+procedure emp_count(deptno1 in emp.deptno%type);
+function  high_sal_dept(deptno1 in emp.deptno%type)return number;
+procedure high_sal;
+function  job_count(job1 emp.job%type) return number;
+end tab_pkg;
+
+create or replace package body tab_pkg as
+procedure emp_count(deptno1 in emp.deptno%type) as
+c number;
+begin
+select count(*) into c from emp where deptno=deptno1;
+dbms_output.put_line(c);
+end emp_count;
+
+function high_sal_dept(deptno1 in emp.deptno%type)return number as c number ;
+begin
+select max(sal) into c from emp where deptno=deptno1;
+dbms_output.put_line(c);
+return c;
+end high_sal_dept;
+
+procedure high_sal as
+c number;
+begin
+select max(sal) into c from emp ;
+dbms_output.put_line(c);
+end high_sal;
+
+function  job_count(job1 emp.job%type) return number as c number;
+begin
+select count(*) into c from emp where job=job1;
+dbms_output.put_line(c);
+return c;
+end job_count;
+end tab_pkg;
+
+set serveroutput on;
+declare
+deptno1 emp.deptno%type:=&deptno;
+job1 emp.job%type:='&job';
+a number;
+b number;
+begin
+tab_pkg.emp_count(deptno1);
+a:=tab_pkg.high_sal_dept(deptno1);
+tab_pkg.high_sal;
+b:=tab_pkg.job_count(job1);
+end;
