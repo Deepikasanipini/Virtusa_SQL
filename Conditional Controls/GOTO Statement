@@ -1,0 +1,17 @@
+GOTO – explain the GOTO statement and shows how to use it to transfer control to a labeled block or statement.
+
+set serveroutput on;
+declare
+n number(10):=&num;
+msg varchar2(50);
+begin
+for a in 2..(n/2) loop
+    if(mod(n,a)=0) then 
+        msg:=' is not a prime number';
+        goto endof;
+    end if;
+    msg:=' is prime number';
+end loop;
+<<endof>>
+ DBMS_OUTPUT.PUT_LINE(n || msg);
+end;
