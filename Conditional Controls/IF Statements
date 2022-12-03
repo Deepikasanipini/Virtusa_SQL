@@ -1,0 +1,12 @@
+IF statements – introduce you various IF statement to either execute or skip a sequence of statements based on a condition.
+
+set serveroutput on;
+declare
+c varchar2(2):=to_char('&enter_char');
+begin
+if (c>='0' and c<='9') then
+    dbms_output.put_line('Given character is digit');
+else
+    dbms_output.put_line('Given character is letter');
+end if;
+end;
