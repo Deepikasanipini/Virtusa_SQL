@@ -1,0 +1,31 @@
+set serveroutput on
+declare 
+eno number(10):=&empno;
+begin
+select job into :jobtitle from emp where empno=eno;
+insert into pl values(:jobtitle);
+dbms_output.put_line('The job of '||eno||' is '||:jobtitle);
+end;
+
+SET SERVEROUTPUT ON
+DECLARE
+stdname varchar2(20);
+rno number(3);
+BEGIN
+select sname,rollno into stdname,rno from student where rollno=501;
+dbms_output.put_line('The student '||stdname||' roll number is 19K61A0'||rno);
+END;
+
+SET SERVEROUTPUT ON
+DECLARE
+dt1 DATE := TO_DATE('&new_dt','DD-MON-YYYY');
+get_day VARCHAR2(15);
+BEGIN
+    get_day := RTRIM(TO_CHAR(dt1,'DAY'));
+    IF(get_day IN ('SATURDAY','SUNDAY')) THEN 
+        dbms_output.put_line('The day of the given date is '||get_day||' and it falls on the weekend');
+    ELSE
+        dbms_output.put_line('The day of the given date is '||get_day||' and it does not falls on the weekend');
+    END IF;
+    dbms_output.put_line('Execution done successfully');
+END;
