@@ -1,0 +1,20 @@
+create or replace package E6_SDD as 
+procedure pro1(empno1 emp.empno%type,sal1 out emp.sal%type);
+end E6_SDD;
+
+create or replace package body E6_SDD as
+procedure pro1(empno1 emp.empno%type,sal1  out emp.sal%type)
+as
+begin
+select sal into sal1 from emp where empno=empno1;
+dbms_output.put_line(sal1);
+end pro1;
+end E6_SDD;
+
+set serveroutput on;
+declare
+empno1 emp.empno%type:=&emp_no;
+sal1 emp.sal%type;
+begin
+E6_SDD.pro1(empno1,sal1);
+end;
