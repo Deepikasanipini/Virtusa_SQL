@@ -1,0 +1,14 @@
+set serveroutput on;
+declare
+cursor cur1(deptno1 number) is select empno,job from emp where deptno=deptno1;
+empno1 emp.ename%type;
+job1 emp.job%type;
+begin
+open cur1(20);
+loop
+    fetch cur1 into empno1,job1;
+    exit when cur1%notfound;
+    dbms_output.put_line(empno1||' '||job1);
+    end loop;
+close cur1;
+end;
