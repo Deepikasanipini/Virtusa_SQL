@@ -1,0 +1,13 @@
+WHILE loop – execute a sequence of statements as long as a specified condition is TRUE.
+
+set serveroutput on;
+declare
+a number(10):=&num;
+num1 number(10):=1;
+begin
+dbms_output.put_line('The first '||a||' numbers with difference three');
+while(num1<=a) loop
+    dbms_output.put_line(num1);
+    num1:=num1+3;
+end loop;
+end;
