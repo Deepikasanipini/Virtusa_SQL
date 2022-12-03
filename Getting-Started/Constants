@@ -1,0 +1,14 @@
+Constants – learn how to declare constants that hold values that remain unchanged throughout the execution of the program.
+
+set serveroutput on;
+declare
+num1 number(10) :=&enter_num;
+begin
+if(num1>0) then
+    dbms_output.put_line('The given number '||num1||' is positive');
+elsif (num1<0) then 
+    dbms_output.put_line('The given number '||num1||' is negative');
+else
+    dbms_output.put_line('The given number is zero');
+end if;
+end;
