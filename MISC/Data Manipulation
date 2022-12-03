@@ -1,0 +1,38 @@
+select * from emp;
+alter table emp1 add constraint pk_empno primary key(empno);
+desc emp1;
+select * from User_indexes where table_name='EMP1';
+create view empaggre as select deptno,min(sal) "MIN SAL",max(sal) "MAX SAL",avg(sal) "AVG SAL" from emp group by deptno;
+select * from empaggre;
+insert into empaggre values(12,1000,500000,2894);
+create view emp_view as select empno,ename,sal from emp;
+select * from emp_view;
+insert into emp_view values(123,'ABCD',90000);
+create view edit_view as select e.empno,e.ename,e.sal,d.deptno from emp e, dept d;
+create view edit_view1 as select e.empno,e.ename,e.sal,e.deptno from emp e;
+select * from edit_view;
+select * from edit_view1;
+insert into edit_view values(8899,'xyz',10000,89);
+create sequence emp_seq
+        increment by 10
+        start with 10
+        minvalue 10
+        maxvalue 100
+        nocycle;
+alter SEQUENCE emp_seq cycle;
+alter SEQUENCE emp_seq cache 2;
+select emp_seq.nextval from dual;
+select * from dept;
+insert into dept values(emp_seq.nextval,'abc','dued');
+select emp_seq.currval from dual;
+create synonym e1 for emp_seq;
+select e1.currval from dual;
+select e1.nextval from dual;
+create sequence emp1_seq1
+        increment by 01
+        start with 500
+        maxvalue 599;
+select concat('19K61A0',emp1_seq1.nextval) FROM dual;
+create table emproll(ROLL varchar2(15));
+select * from emproll;
+insert into emproll values(concat('19K61A0',emp1_seq1.nextval));
