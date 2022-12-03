@@ -1,0 +1,7 @@
+SELECT CONVERT(int, 5.5);
+
+SELECT CONVERT(varchar, 5.5);
+
+SELECT CONVERT(datetime, '2020-08-08');
+
+SELECT CONVERT(varchar, '2020-08-08', 100);
