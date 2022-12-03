@@ -1,0 +1,8 @@
+create or replace function deptno(empno1 number,empno2 number) return number
+is dept1 number;
+dept2 number;
+begin
+select deptno into dept1 from emp where empno=empno1 ;
+select deptno into dept1 from emp where empno=empno1 ;
+return dept;
+end;
